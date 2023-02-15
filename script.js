@@ -10,8 +10,9 @@ async function getData() {
     let response = await fetch("http://127.0.0.1:8000/letsquiz_api/getdata", {
         headers: {
             'Authorization': 'Bearer ' + token,
-            "Access-Control-Allow-Methods": "GET",
-            "Access-Control-Allow-Origin": "https://ayotech-py.github.io",        }
+            "Access-Control-Allow-Methods": "PUT, GET, HEAD, POST, DELETE, OPTIONS",
+            "Access-Control-Allow-Origin": "https://ayotech-py.github.io",
+        }
     });
     console.log(response.headers)
 }
