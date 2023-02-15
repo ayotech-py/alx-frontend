@@ -20,7 +20,7 @@ document.getElementById("sign_up").onclick = function() {
             })
             .catch((error)  => {
                 document.getElementById("response").innerHTML = error;
-                console.log(error)
+                //console.log(error)
             });
         } else {
             console.log("Password mismatch")
