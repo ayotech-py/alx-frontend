@@ -16,9 +16,10 @@ document.getElementById("sign_up").onclick = function() {
             })
             .then((response) => response.json())
             .then((data) => {
-                window.localStorage.setItem("response", data)
+                console.log(data)
+                /* window.localStorage.setItem("response", data)
                 window.location = "../html/login.html";
-                document.getElementById("response").innerHTML = data;
+                document.getElementById("response").innerHTML = data; */
             })
             .catch((error)  => {
                 document.getElementById("response").innerHTML = error;
