@@ -13,7 +13,9 @@ async function loginIn() {
         console.log(data.error);
         document.getElementById("response").innerHTML = data.error;
     } else if (response.status === 200) {
-        console.log(data)
+        console.log(data.access)
+        window.localStorage.setItem("access-token", data.access)
+        window.localStorage.setItem("refresh-token", data.refresh)
     } else {
         console.log(data.error)
         document.getElementById("response").innerHTML = data.error;
