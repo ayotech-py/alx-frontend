@@ -16,7 +16,7 @@ document.getElementById("sign_up").onclick = function() {
             })
             .then((response) => response.json())
             .then((data) => {
-                console.log(data)
+                console.log("this block of code is running")
             })
             .catch((error)  => {
                 document.getElementById("response").innerHTML = error;
