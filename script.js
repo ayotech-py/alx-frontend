@@ -7,7 +7,12 @@ function buttonClick(btn_id) {
 async function getData() {
     let token = window.localStorage.getItem("access-token")
     console.log(token)
-    let response = await fetch("http://127.0.0.1:8000/letsquiz_api/getdata");
+    let response = await fetch("http://127.0.0.1:8000/letsquiz_api/getdata", {
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            "Access-Control-Allow-Methods": "PUT, GET, HEAD, POST, DELETE, OPTIONS",
+        }
+    });
     console.log(response.headers)
 }
 
