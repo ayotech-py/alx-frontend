@@ -51,6 +51,9 @@ async function signIn(){
             if (response.status === 400) {
                 let data = await response.json();
                 console.log(data.error);
+            } else if (response.status === 200) {
+                console.log(data)
+                console.log(data.body)
             }
         }
     }
