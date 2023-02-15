@@ -47,7 +47,7 @@ async function signIn(){
                     "password": password_01,
                 }, null),
             })
-            console.log(response)
+            console.log(response.json())
         }
     }
 }
