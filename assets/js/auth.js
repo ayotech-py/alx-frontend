@@ -48,6 +48,8 @@ async function signIn(){
                 }, null),
             })
             console.log(response.status)
+            let data = await response.json();
+            console.log(data)
         }
     }
 }
