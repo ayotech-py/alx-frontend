@@ -20,7 +20,7 @@ async function signIn(){
                     "username": username,
                     "email": email,
                     "password": password_01,
-                }, null),
+                }),
             })
             let data = await response.json();
             if (response.status === 400) {
