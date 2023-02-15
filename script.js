@@ -12,7 +12,7 @@ async function getData() {
             'Authorization': 'Bearer ' + token,
         }
     });
-    console.log(response.headers)
+    console.log(response)
 }
 
 getData();
