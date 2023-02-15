@@ -11,6 +11,7 @@ async function getData() {
         headers: {
             'Authorization': 'Bearer ' + token,
             "Access-Control-Allow-Methods": "GET, HEAD, OPTIONS",
+            "Content-Type": "application/json",
             "Access-Control-Allow-Origin": "https://ayotech-py.github.io",
         }
     });
