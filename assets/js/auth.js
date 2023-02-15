@@ -21,11 +21,14 @@ async function signIn(){
             let data = await response.json();
             if (response.status === 400) {
                 console.log(data.error);
-                document.getElementById("response").innerHTML = data.error
+                document.getElementById("response").innerHTML = data.error;
             } else if (response.status === 200) {
                 console.log(data.success)
+                window.location = "../html/login.html";
+                document.getElementById("response").innerHTML = data.success;
             } else {
                 console.log(data.error)
+                document.getElementById("response").innerHTML = data.error;
             }
         }
     }
