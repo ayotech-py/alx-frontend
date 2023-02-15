@@ -47,6 +47,7 @@ async function signIn(){
                     "password": password_01,
                 }, null),
             })
+            console.log(response.status)
             if (response.status === 400) {
                 let data = await response.json();
                 console.log(data.error);
