@@ -2,6 +2,10 @@ document.getElementById("sign_up").onclick = function() {
     signIn();
 }
 
+document.getElementById("login_in").onclick = function() {
+    loginIn();
+}
+
 async function signIn(){
     let password_01 = document.getElementById("confirm_password").value;
     let password_02 = document.getElementById("password").value;
