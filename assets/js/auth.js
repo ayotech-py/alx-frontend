@@ -52,7 +52,7 @@ async function signIn(){
                 console.log(data.error);
             } else if (response.status === 200) {
                 console.log(data)
-                console.log(data.body)
+                console.log(data.success)
             }
         }
     }
