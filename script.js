@@ -12,7 +12,7 @@ async function getData() {
             'Authorization': 'Bearer ' + token,
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Credentials": "true",
-            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+            "Access-Control-Allow-Headers": "Content-Type"
         }
     });
     console.log(response.headers)
