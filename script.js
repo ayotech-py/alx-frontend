@@ -14,11 +14,15 @@ async function getData() {
     });
     let data = await response.json()
     if (response.status === 200) {
-        document.getElementById("logged_in_user").innerHTML = `Welcome back ${data.user}`
+        user = data.user
+        document.getElementById("logged_in_user").innerHTML = `WELCOME BACK ${user.toUpperCase()}`
         let remove = document.getElementsByClassName("list");
         for (let a = 0; a < remove.length - 1; a++) {
             remove[a].style.display = 'none'
         }
+        let auth = document.getElementById("auth");
+        console.log(auth);
+        auth.innerHTML = 'Dashboard';
     }
 }
 
