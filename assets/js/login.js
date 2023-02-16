@@ -16,9 +16,9 @@ async function loginIn() {
         console.log(data.access)
         window.localStorage.setItem("access-token", data.access)
         window.localStorage.setItem("refresh-token", data.refresh)
+        let username = window.sessionStorage.setItem("user", data.username)
         window.location = "../../index.html"
     } else {
-        console.log(data.error)
         document.getElementById("response").innerHTML = data.error;
     }
 }
