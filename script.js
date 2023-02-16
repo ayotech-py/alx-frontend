@@ -13,7 +13,9 @@ async function getData() {
         }
     });
     let data = await response.json()
-    console.log(data)
+    if (response.status === 200) {
+        document.getElementById("logged_in_user").innerHTML = `Welcome back ${data.user}` 
+    }
 }
 
 getData();
