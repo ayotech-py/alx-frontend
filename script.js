@@ -12,7 +12,8 @@ async function getData() {
             'Authorization': 'Bearer ' + token,
         }
     });
-    console.log(response)
+    let data = await response.json()
+    console.log(data)
 }
 
 getData();
