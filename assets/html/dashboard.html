@@ -135,6 +135,7 @@
             <section class="organizeQuiz">
                 <form>
                     <h3>Provide details</h3>
+                    <h5 id="response"></h5> 
                     <div class="form">
                         <input type="text" id="quiz-title" name="quiz-title" placeholder="quiz title">
                     </div>
@@ -149,7 +150,7 @@
                         <option value="Sport and leisure">Sport and leisure</option>
                     </select>
                     <div class="button">
-                        <a href="#"><span><button class="btn-01">Create Quiz</button></span></a> 
+                        <button class="btn-01"id="quiz-btn" type="button">Create Quiz</button> 
                     </div> 
                 </form>
             </section>
@@ -161,13 +162,16 @@
                     <div class="quiz-details" style="padding:0">
                         <div class="radio" style="flex-direction:column;align-items:flex-start">
                             <div class="radio-btn" style="margin-bottom: 10px;">
-                                <p class="details">Quiz Title</p>
+                                <p class="details" id="quiz-head">Quiz Title</p>
                             </div>
                             <div class="radio-btn" style="margin-bottom: 10px;">
-                                <p class="details">Quiz Subject</p>
+                                <p class="details" id="quiz-subject">Quiz Subject</p>
                             </div>
                             <div class="radio-btn" style="margin-bottom: 10px;">
-                                <p class="details">Date Created</p>
+                                <p class="details" id="quiz-id">Quiz ID</p>
+                            </div>
+                            <div class="radio-btn" style="margin-bottom: 10px;">
+                                <p class="details" id="quiz-date">Date Created</p>
                             </div>
                         </div>
                     </div>
