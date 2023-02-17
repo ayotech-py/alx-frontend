@@ -7,6 +7,9 @@ async function loginIn() {
             "username": username,
             "password": password,
         }),
+        headers: {
+            'Access-Control-Allow-Origin': '*'
+        }
     })
     let data = await response.json();
     if (response.status === 400) {
