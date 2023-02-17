@@ -31,6 +31,9 @@ async function getData() {
 async function chechActive () {
     let token = window.localStorage.getItem("access-token")
     let username = window.sessionStorage.getItem("user")
+    if (username === null) {
+        window.location = "../html/login.html"
+    }
     let response = await fetch("http://127.0.0.1:8000/letsquiz_api/getdata", {
         headers: {
             'Authorization': 'Bearer ' + token,
@@ -70,10 +73,38 @@ async function getQuiz() {
 
 document.getElementById('quiz-btn').onclick = function() {
     getQuiz();
+    getData();
+}
+
+async function quizStart() {
+    let username = window.sessionStorage.getItem("user")
+    let access = window.localStorage.getItem("access-token")
+    let response = await fetch('http://127.0.0.1:8000/letsquiz_api/quiz_status/', {
+        method: 'POST',
+        body: JSON.stringify({
+            'status': true,
+        }),
+        headers: {
+            "Authorization": 'Bearer ' + access,
+            'user': username,
+        }
+    })
+    let data = await response.json();
+    if (response.status === 200) {
+        let button = document.getElementById('start-btn')
+        button.innerHTML = "Ongoing Quiz";
+        button.disabled = true;
+    } else {
+        console.log("failed to start quiz")
+    }
 }
 
 
-window.setInterval(chechActive, 5000)
+document.getElementById("start-btn").onclick = function() {
+    quizStart();
+}
+
+window.setInterval(chechActive, 10000)
 
 chechActive()
 
