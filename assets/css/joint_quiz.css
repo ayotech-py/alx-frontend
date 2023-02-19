@@ -23,7 +23,7 @@ body {
     margin-top: 5%;
 }
 
-main {
+main, aside {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -91,6 +91,14 @@ main {
     padding: 1rem;
 }
 
+.radio-btnn {
+    display: none;
+    margin-bottom: 1.5rem;
+    background-color: white;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
 .question {
     border-bottom: 4px solid cornflowerblue;
 }
@@ -149,6 +157,10 @@ main {
 
 .wrong   {
     color: red;
+}
+
+aside {
+    display: none;
 }
 
 @media (max-width: 650px) {
