@@ -1,8 +1,5 @@
-//let quiz_id = window.sessionStorage.getItem("quiz_id");
-//let my_name = window.sessionStorage.getItem("name")
-
-let quiz_id =  383371;
-let my_name = 'James';
+let quiz_id = window.sessionStorage.getItem("quiz_id");
+let my_name = window.sessionStorage.getItem("name")
 
 async function scoreBoard() {
     let response = await fetch(`http://127.0.0.1:8000/letsquiz_api/quiz_set_score/?quiz_id=${quiz_id}`)
