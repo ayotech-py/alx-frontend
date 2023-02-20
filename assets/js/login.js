@@ -1,7 +1,7 @@
 async function loginIn() {
     let password = document.getElementById("password").value;
     let username = document.getElementById("username").value;
-    let response = await fetch("http://127.0.0.1:8000/letsquiz_api/login/", {
+    let response = await fetch("http://ayotech-46706.portmap.io:46706/letsquiz_api/login/", {
         method: "POST",
         body: JSON.stringify({
             "username": username,

@@ -2,7 +2,7 @@ let quiz_id = window.sessionStorage.getItem("quiz_id");
 let my_name = window.sessionStorage.getItem("name")
 
 async function scoreBoard() {
-    let response = await fetch(`http://127.0.0.1:8000/letsquiz_api/quiz_set_score/?quiz_id=${quiz_id}`)
+    let response = await fetch(`http://ayotech-46706.portmap.io:46706/letsquiz_api/quiz_set_score/?quiz_id=${quiz_id}`)
     let data = await response.json()
     let score_list = data.data
     console.log(score_list)

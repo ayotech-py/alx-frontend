@@ -3,7 +3,7 @@ chechActive();
 async function getData() {
     let token = window.localStorage.getItem("access-token")
     let username = window.sessionStorage.getItem("user")
-    let response = await fetch("http://127.0.0.1:8000/letsquiz_api/getdata", {
+    let response = await fetch("http://ayotech-46706.portmap.io:46706/letsquiz_api/getdata", {
         headers: {
             'Authorization': 'Bearer ' + token,
             'user': username,
@@ -34,7 +34,7 @@ async function chechActive () {
     if (username === null) {
         window.location = "../html/login.html"
     }
-    let response = await fetch("http://127.0.0.1:8000/letsquiz_api/getdata", {
+    let response = await fetch("http://ayotech-46706.portmap.io:46706/letsquiz_api/getdata", {
         headers: {
             'Authorization': 'Bearer ' + token,
             'user': username,
@@ -53,7 +53,7 @@ async function getQuiz() {
     document.getElementById("response").innerHTML = "please wait..."; 
     let title = document.getElementById("quiz-title").value;
     let subject = document.getElementById("subject").value;
-    let response = await fetch('http://127.0.0.1:8000/letsquiz_api/organize_quiz/', {
+    let response = await fetch('http://ayotech-46706.portmap.io:46706/letsquiz_api/organize_quiz/', {
         method: 'POST',
         user: window.sessionStorage.getItem("user"),
         body: JSON.stringify({
@@ -79,7 +79,7 @@ document.getElementById('quiz-btn').onclick = function() {
 async function quizStart() {
     let username = window.sessionStorage.getItem("user")
     let access = window.localStorage.getItem("access-token")
-    let response = await fetch('http://127.0.0.1:8000/letsquiz_api/quiz_status/', {
+    let response = await fetch('http://ayotech-46706.portmap.io:46706/letsquiz_api/quiz_status/', {
         method: 'POST',
         body: JSON.stringify({
             'status': true,

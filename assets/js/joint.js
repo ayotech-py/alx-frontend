@@ -3,7 +3,7 @@ let addUsers = []
 async function getJoinedUsers() {
     let quiz_id = window.sessionStorage.getItem("quiz_id")
     console.log(quiz_id)
-    let response = await fetch('http://127.0.0.1:8000/letsquiz_api/quiz_users/', {
+    let response = await fetch('http://ayotech-46706.portmap.io:46706/letsquiz_api/quiz_users/', {
         method: "POST",
         headers: {
             'quiz_id': quiz_id
