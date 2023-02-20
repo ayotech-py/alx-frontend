@@ -34,4 +34,4 @@ async function getJoinedUsers() {
 
 setInterval(function(){
     getJoinedUsers();
-}, 1000)
+}, 10)
