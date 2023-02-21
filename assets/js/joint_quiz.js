@@ -20,7 +20,8 @@ let my_name = window.sessionStorage.getItem("name")
 document.getElementById("my_name").innerHTML = my_name;
 
 function questionAction(index) {
-    var elements = document.getElementsByTagName("input");
+    var elements = documsent.getElementsByTagName("input");
+    console.log(elements)
 
     for (var i = 0; i < elements.length; i++) {
         if (elements[i].type == "radio") {
