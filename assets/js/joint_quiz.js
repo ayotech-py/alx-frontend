@@ -159,6 +159,10 @@ async function scoreBoard() {
 }
 
 function nextPage() {
+    
+    document.getElementsByTagName('main')[0].style.display = 'block';
+    document.getElementsByTagName('aside')[0].style.display = 'none';
+    
     var elements = document.getElementsByTagName("input");
 
     for (var i = 0; i < elements.length; i++) {
@@ -166,9 +170,6 @@ function nextPage() {
             elements[i].checked = false;
         }
     }
-
-    document.getElementsByTagName('main')[0].style.display = 'block';
-    document.getElementsByTagName('aside')[0].style.display = 'none';
 }
 
 function questionLoop(questionNo) {
