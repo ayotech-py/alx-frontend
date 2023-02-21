@@ -20,6 +20,13 @@ let my_name = window.sessionStorage.getItem("name")
 document.getElementById("my_name").innerHTML = my_name;
 
 function questionAction(index) {
+    var elements = document.getElementsByTagName("input");
+
+    for (var i = 0; i < elements.length; i++) {
+        if (elements[i].type == "radio") {
+            elements[i].checked = false;
+        }
+    }
     questions.then(
         data => {
             document.getElementById("subject-title").innerHTML = data[index].category;
@@ -162,14 +169,7 @@ function nextPage() {
     
     document.getElementsByTagName('main')[0].style.display = 'block';
     document.getElementsByTagName('aside')[0].style.display = 'none';
-    
-    var elements = document.getElementsByTagName("input");
 
-    for (var i = 0; i < elements.length; i++) {
-        if (elements[i].type == "radio") {
-            elements[i].checked = false;
-        }
-    }
 }
 
 function questionLoop(questionNo) {
