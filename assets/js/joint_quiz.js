@@ -193,7 +193,7 @@ let interval = 10
 setInterval(function() {
     questionLoop(questionNo);
     questionNo++;
-    if (questionNo == 1) {
+    if (questionNo < 1) {
         console.log("interval 10")
         interval = 10;
     } else {
