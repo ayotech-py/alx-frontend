@@ -194,8 +194,10 @@ setInterval(function() {
     questionLoop(questionNo);
     questionNo++;
     if (questionNo == 1) {
+        console.log("interval 10")
         interval = 10;
     } else {
         interval = 20000;
+        console.log("interval 20000")
     }
 }, interval)
