@@ -90,13 +90,7 @@ function CorrectAnswer(index, time){
             if (answer[a].checked == true) {
                 console.log(selectedAnswer[a].innerHTML)
                 if (selectedAnswer[a].innerHTML === data[index].correctAnswer) {
-                    console.log("correct")
-                    console.log('your score is ' + time)
                     window.sessionStorage.setItem("quiz_score", time);
-                    let quiz_score = window.sessionStorage.getItem("quiz_score");
-                    console.log(quiz_score);
-                } else {
-                    console.log("wrong")
                 }
             }
         }
