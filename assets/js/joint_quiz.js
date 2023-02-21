@@ -160,6 +160,14 @@ async function scoreBoard() {
 }
 
 function nextPage() {
+    var elements = document.getElementsByTagName("input");
+
+    for (var i = 0; i < elements.length; i++) {
+        if (elements[i].type == "radio") {
+            elements[i].checked = false;
+        }
+    }
+    
     document.getElementsByTagName('main')[0].style.display = 'block';
     document.getElementsByTagName('aside')[0].style.display = 'none';
 }
