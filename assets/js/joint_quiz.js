@@ -52,7 +52,9 @@ function questionAction(index) {
             
                 seconds--;
             
-                if (seconds < 0){
+                if (seconds <= 0){
+                    let quiz_score = window.sessionStorage.getItem("quiz_score");
+                    setScore(quiz_score);
                     clearInterval(timeDuration)
                 } else if (seconds > 9) {
                     document.getElementById("duration").innerHTML = `Time remaining: ${seconds} seconds`;
@@ -80,7 +82,7 @@ function shuffleArray(array) {
  }
 
  //This function marks and saves the correct answer score
-function CorrectAnswer(question, index, time){
+function CorrectAnswer(index, time){
     questions.then(data => {
         let answer = document.querySelectorAll('input[name="fav_language"]');
         let selectedAnswer = document.getElementsByTagName("label")
@@ -90,7 +92,9 @@ function CorrectAnswer(question, index, time){
                 if (selectedAnswer[a].innerHTML === data[index].correctAnswer) {
                     console.log("correct")
                     console.log('your score is ' + time)
-                    setScore(time);
+                    window.sessionStorage.setItem("quiz_score", time);
+                    let quiz_score = window.sessionStorage.getItem("quiz_score");
+                    console.log(quiz_score);
                 } else {
                     console.log("wrong")
                 }
