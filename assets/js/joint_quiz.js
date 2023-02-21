@@ -93,7 +93,7 @@ function CorrectAnswer(question, index, time){
 
 //This function listens to the clicked answer
 function markBtn(no) {
-    let time = 1000;
+    let time = 1500;
     document.getElementById("answer-01").onclick = function() {
         CorrectAnswer(questions, no, time)
     }
@@ -126,8 +126,7 @@ async function setScore(user_score) {
             'score': user_score
         })
     })
-    let data = await response.json()
-    console.log(data);
+    let data = await response.json();
 }
 
 //Score board
@@ -167,7 +166,7 @@ function nextPage() {
             elements[i].checked = false;
         }
     }
-    
+
     document.getElementsByTagName('main')[0].style.display = 'block';
     document.getElementsByTagName('aside')[0].style.display = 'none';
 }
@@ -181,10 +180,10 @@ function questionLoop(questionNo) {
         } else {
             window.location = "./leaderboard.html"
         }
-    }, 10000)
+    }, 15000)
     setTimeout(function(){
         nextPage();
-    }, 15000)
+    }, 20000)
 }
 
 let questionNo = 0;
@@ -192,4 +191,4 @@ let questionNo = 0;
 setInterval(function() {
     questionLoop(questionNo);
     questionNo++;
-}, 15000)
+}, 20000)
