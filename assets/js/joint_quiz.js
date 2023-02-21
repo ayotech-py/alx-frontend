@@ -46,7 +46,7 @@ function questionAction(index) {
     })
     questions.then(
         data => {
-            var seconds = 10;
+            var seconds = 15;
     
             var timeDuration = setInterval(function(){
             
@@ -54,6 +54,8 @@ function questionAction(index) {
             
                 if (seconds < 0){
                     clearInterval(timeDuration)
+                } else if (seconds > 9) {
+                    document.getElementById("duration").innerHTML = `Time remaining: ${seconds} seconds`;
                 } else {
                     document.getElementById("duration").innerHTML = `Time remaining: 0${seconds} seconds`;
                 }
