@@ -188,7 +188,6 @@ function questionLoop(questionNo) {
 }
 
 let questionNo = 0;
-let interval = 20000;
 
 setInterval(function() {
     questionLoop(questionNo);
