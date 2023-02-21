@@ -188,8 +188,14 @@ function questionLoop(questionNo) {
 }
 
 let questionNo = 0;
+let interval = 10
 
 setInterval(function() {
     questionLoop(questionNo);
     questionNo++;
-}, 20000)
+    if (questionNo == 1) {
+        interval = 10;
+    } else {
+        interval = 20000;
+    }
+}, interval)
