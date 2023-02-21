@@ -21,7 +21,6 @@ document.getElementById("my_name").innerHTML = my_name;
 
 function questionAction(index) {
     var elements = document.getElementsByTagName("input");
-    console.log(elements)
 
     for (var i = 0; i < elements.length; i++) {
         if (elements[i].type == "radio") {
