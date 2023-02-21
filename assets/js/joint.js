@@ -2,7 +2,7 @@ let addUsers = []
 
 async function getJoinedUsers() {
     let quiz_id = window.sessionStorage.getItem("quiz_id")
-    console.log(quiz_id)
+
     let response = await fetch('http://ayotech-46706.portmap.io:46706/letsquiz_api/quiz_users/', {
         method: "POST",
         headers: {
@@ -14,6 +14,9 @@ async function getJoinedUsers() {
     })
     let data = await response.json()
     let names = data['data']
+
+    document.getElementById("quiz_title").innerHTML = `Quiz Title - ${data['quiz_name']}`;
+    document.getElementById('quiz_id').innerHTML = `Quiz ID - ${quiz_id}`
     
     for (let a = 0; a < names.length; a++) {
         if (!addUsers.includes(data['data'][a][1])) {

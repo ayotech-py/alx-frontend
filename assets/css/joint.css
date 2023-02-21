@@ -34,3 +34,14 @@ main {
 .title   {
     text-align: center;
 }
+
+@media (max-width: 650px) {
+    main {
+        width: 95%;
+        font-size: .8rem;
+    }
+
+    .user img {
+        width: 60px;
+    }
+}

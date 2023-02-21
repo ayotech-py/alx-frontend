@@ -1,3 +1,4 @@
+getData();
 chechActive();
 
 async function getData() {
@@ -108,5 +109,4 @@ window.setInterval(chechActive, 10000)
 
 chechActive()
 
-getData();
 
