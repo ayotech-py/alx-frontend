@@ -164,7 +164,7 @@ aside {
 }
 
 @media (max-width: 650px) {
-    main {
+    main, aside {
         width: 90%;
     }
 

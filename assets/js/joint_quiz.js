@@ -1,4 +1,5 @@
 let quiz_id = window.sessionStorage.getItem("quiz_id");
+window.sessionStorage.setItem("quiz_score", 0);
 
 //This function fetchs the question
 async function fetchQuestion() {
@@ -54,6 +55,7 @@ function questionAction(index) {
             
                 if (seconds <= 0){
                     let quiz_score = window.sessionStorage.getItem("quiz_score");
+                    console.log(quiz_score)
                     setScore(quiz_score);
                     clearInterval(timeDuration)
                 } else if (seconds > 9) {
@@ -88,9 +90,11 @@ function CorrectAnswer(index, time){
         let selectedAnswer = document.getElementsByTagName("label")
         for (var a = 0; a < answer.length; a++) {
             if (answer[a].checked == true) {
-                console.log(selectedAnswer[a].innerHTML)
                 if (selectedAnswer[a].innerHTML === data[index].correctAnswer) {
                     window.sessionStorage.setItem("quiz_score", time);
+                    break;
+                } else {
+                    window.sessionStorage.setItem("quiz_score", 0);
                 }
             }
         }
@@ -102,18 +106,18 @@ function CorrectAnswer(index, time){
 function markBtn(no) {
     let time = 1500;
     document.getElementById("answer-01").onclick = function() {
-        CorrectAnswer(questions, no, time)
+        CorrectAnswer(no, time)
     }
     document.getElementById("answer-02").onclick = function() {
-        CorrectAnswer(questions, no, time)
+        CorrectAnswer(no, time)
     }
     
     document.getElementById("answer-03").onclick = function() {
-        CorrectAnswer(questions, no, time)
+        CorrectAnswer(no, time)
     }
     
     document.getElementById("answer-04").onclick = function() {
-        CorrectAnswer(questions, no, time)
+        CorrectAnswer(no, time)
     }
     setInterval(function() {
         time--
@@ -130,7 +134,7 @@ async function setScore(user_score) {
         body: JSON.stringify({
             "quiz_id": quiz_id,
             'name': name,
-            'score': user_score
+            'score': parseInt(user_score)
         })
     })
     let data = await response.json();
@@ -141,14 +145,13 @@ async function scoreBoard() {
     let response = await fetch(`http://ayotech-46706.portmap.io:46706/letsquiz_api/quiz_set_score/?quiz_id=${quiz_id}`)
     let data = await response.json()
     let score_list = data.data
-
     
     document.getElementsByTagName('main')[0].style.display = 'none';
     document.getElementsByTagName('aside')[0].style.display = 'block';
     
     var class_name = document.getElementsByClassName("radio-btnn")
     
-    for (let a = 0; a < score_list.length; a++) {
+    for (let a = 0; a < class_name.length; a++) {
         
         class_name[a].style.display = 'flex';
         class_name[a].style.justifyContent = 'space-between';
@@ -169,6 +172,7 @@ function nextPage() {
     
     document.getElementsByTagName('main')[0].style.display = 'block';
     document.getElementsByTagName('aside')[0].style.display = 'none';
+    window.sessionStorage.setItem("quiz_score", 0);
 
 }
 
@@ -192,11 +196,4 @@ let questionNo = 0;
 setInterval(function() {
     questionLoop(questionNo);
     questionNo++;
-    if (questionNo < 1) {
-        console.log("interval 10")
-        interval = 10;
-    } else {
-        interval = 20000;
-        console.log("interval 20000")
-    }
-}, interval)
+}, 20000)
