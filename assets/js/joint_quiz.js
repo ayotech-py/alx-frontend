@@ -1,6 +1,7 @@
 let quiz_id = window.sessionStorage.getItem("quiz_id");
 window.sessionStorage.setItem("quiz_score", 0);
 
+
 //This function fetchs the question
 async function fetchQuestion() {
     let response = await fetch(`http://ayotech-46706.portmap.io:46706/letsquiz_api/quiz_questions?quiz_id=${quiz_id}`)
@@ -22,7 +23,7 @@ document.getElementById("my_name").innerHTML = my_name;
 
 function questionAction(index) {
     var elements = document.getElementsByTagName("input");
-
+    
     for (var i = 0; i < elements.length; i++) {
         if (elements[i].type == "radio") {
             elements[i].checked = false;
@@ -31,7 +32,7 @@ function questionAction(index) {
     questions.then(
         data => {
             document.getElementById("subject-title").innerHTML = data[index].category;
-            document.getElementById("question-no").innerHTML = `Question ${index+1} of 20`;
+            document.getElementById("question-no").innerHTML = `Question ${index+1} of 10`;
             document.getElementById("question").innerHTML = data[index].question;
             let answers = [data[index].correctAnswer, data[index].incorrectAnswers[2], data[index].incorrectAnswers[0], data[index].incorrectAnswers[1]];
             answers = shuffleArray(answers);
@@ -50,7 +51,7 @@ function questionAction(index) {
             var seconds = 15;
     
             var timeDuration = setInterval(function(){
-            
+                
                 seconds--;
             
                 if (seconds <= 0){
@@ -68,13 +69,14 @@ function questionAction(index) {
     )
 }
 
+
 //this question shuffles the list of answers
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
     
         // Generate random number
         var j = Math.floor(Math.random() * (i + 1));
-                    
+        
         var temp = array[i];
         array[i] = array[j];
         array[j] = temp;
@@ -84,7 +86,7 @@ function shuffleArray(array) {
  }
 
  //This function marks and saves the correct answer score
-function CorrectAnswer(index, time){
+ function CorrectAnswer(index, time){
     questions.then(data => {
         let answer = document.querySelectorAll('input[name="fav_language"]');
         let selectedAnswer = document.getElementsByTagName("label")
@@ -173,6 +175,7 @@ function nextPage() {
     document.getElementsByTagName('main')[0].style.display = 'block';
     document.getElementsByTagName('aside')[0].style.display = 'none';
     window.sessionStorage.setItem("quiz_score", 0);
+    document.getElementById("duration").innerHTML = '';
 
 }
 
@@ -191,7 +194,9 @@ function questionLoop(questionNo) {
     }, 20000)
 }
 
-let questionNo = 0;
+questionLoop(0);
+
+let questionNo = 1;
 
 setInterval(function() {
     questionLoop(questionNo);
