@@ -1,10 +1,11 @@
 getData();
 chechActive();
+document.getElementById("logged_in_user").innerHTML = `WELCOME BACK ${window.sessionStorage.getItem('user')}`
 
 async function getData() {
     let token = window.localStorage.getItem("access-token")
     let username = window.sessionStorage.getItem("user")
-    let response = await fetch("http://ayotech-46706.portmap.io:46706/letsquiz_api/getdata", {
+    let response = await fetch("http://web-01.ayotech-py.tech/letsquiz_api/getdata", {
         headers: {
             'Authorization': 'Bearer ' + token,
             'user': username,
@@ -12,6 +13,7 @@ async function getData() {
     });
     let data = await response.json()
     if (response.status === 200) {
+        console.log(data)
         user = data.user
         quiz_data = data['quiz-details']
         console.log(quiz_data.at(-1))
@@ -24,8 +26,6 @@ async function getData() {
         document.getElementById("quiz-subject").innerHTML = `Subject: ${quiz_subject}`
         document.getElementById("quiz-id").innerHTML = `ID: ${quiz_id}`
         document.getElementById("quiz-date").innerHTML = `Date: ${created_at.substring(0,10)}`
-
-        document.getElementById("logged_in_user").innerHTML = `WELCOME BACK ${user.toUpperCase()}`
     }
 }
 
@@ -35,7 +35,7 @@ async function chechActive () {
     if (username === null) {
         window.location = "../html/login.html"
     }
-    let response = await fetch("http://ayotech-46706.portmap.io:46706/letsquiz_api/getdata", {
+    let response = await fetch("http://web-01.ayotech-py.tech/letsquiz_api/getdata", {
         headers: {
             'Authorization': 'Bearer ' + token,
             'user': username,
@@ -54,7 +54,7 @@ async function getQuiz() {
     document.getElementById("response").innerHTML = "please wait..."; 
     let title = document.getElementById("quiz-title").value;
     let subject = document.getElementById("subject").value;
-    let response = await fetch('http://ayotech-46706.portmap.io:46706/letsquiz_api/organize_quiz/', {
+    let response = await fetch('http://web-01.ayotech-py.tech/letsquiz_api/organize_quiz/', {
         method: 'POST',
         user: window.sessionStorage.getItem("user"),
         body: JSON.stringify({
@@ -80,7 +80,7 @@ document.getElementById('quiz-btn').onclick = function() {
 async function quizStart() {
     let username = window.sessionStorage.getItem("user")
     let access = window.localStorage.getItem("access-token")
-    let response = await fetch('http://ayotech-46706.portmap.io:46706/letsquiz_api/quiz_status/', {
+    let response = await fetch('http://web-01.ayotech-py.tech/letsquiz_api/quiz_status/', {
         method: 'POST',
         body: JSON.stringify({
             'status': true,
