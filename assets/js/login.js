@@ -11,18 +11,22 @@ async function loginIn() {
             'Access-Control-Allow-Origin': '*'
         }
     })
+    console.log(response)
     let data = await response.json();
+    console.log(data)
     if (response.status === 400) {
         console.log(data.error);
         document.getElementById("response").innerHTML = data.error;
+        console.log(data)
     } else if (response.status === 200) {
-        console.log(data.access)
+        console.log(data)
         window.localStorage.setItem("access-token", data.access)
         window.localStorage.setItem("refresh-token", data.refresh)
         let username = window.sessionStorage.setItem("user", data.username)
         window.location = "../../index.html"
     } else {
         document.getElementById("response").innerHTML = data.error;
+        console.log(data)
     }
 }
 

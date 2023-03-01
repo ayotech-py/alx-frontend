@@ -188,10 +188,10 @@ function questionLoop(questionNo) {
         } else {
             window.location = "./leaderboard.html"
         }
-    }, 15000)
+    }, 17000)
     setTimeout(function(){
         nextPage();
-    }, 20000)
+    }, 22000)
 }
 
 questionLoop(0);
@@ -201,4 +201,4 @@ let questionNo = 1;
 setInterval(function() {
     questionLoop(questionNo);
     questionNo++;
-}, 20000)
+}, 22000)

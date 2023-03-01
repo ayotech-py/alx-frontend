@@ -3,15 +3,7 @@ let addUsers = []
 async function getJoinedUsers() {
     let quiz_id = window.sessionStorage.getItem("quiz_id")
 
-    let response = await fetch('http://web-01.ayotech-py.tech/letsquiz_api/quiz_users/', {
-        method: "POST",
-        headers: {
-            'quiz_id': quiz_id
-        },
-        body: JSON.stringify({
-            "quiz_id": quiz_id,
-        })
-    })
+    let response = await fetch(`http://web-01.ayotech-py.tech/letsquiz_api/quiz_users/?quiz_id=${quiz_id}`)
     let data = await response.json()
     let names = data['data']
 
@@ -29,7 +21,6 @@ async function getJoinedUsers() {
             user_container.innerHTML = user_container.innerHTML + user;
         }
     }
-
     if (data.status) {
         window.location = "./joint_quiz.html";
     }
