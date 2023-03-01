@@ -12,9 +12,9 @@ async function getData() {
         }
     });
     let data = await response.json()
-    if (response.status === 200) {
+    quiz_data = data['quiz-details']
+    if (response.status === 200 && quiz_data.at(-1)['status'] != true) {
         user = data.user
-        quiz_data = data['quiz-details']
         console.log(quiz_data.at(-1))
         let quiz_title = quiz_data.at(-1)['quiz_title']
         let quiz_subject = quiz_data.at(-1)['subject']
@@ -59,16 +59,16 @@ async function chechActive () {
                     </div>
                 </div>
             </div>
-            <div class="quiz-button">
-                <a href="#"><button>View Winners</button></a>
-            </div>
-        </div>`
-            quiz_container.innerHTML = quiz_container.innerHTML + quiz_list;
-
+                <div class="quiz-button">
+                    <a href="#"><button>View Winners</button></a>
+                </div>
+            </div>`
+            if (list[a]['status'] === true) {
+                quiz_container.innerHTML = quiz_container.innerHTML + quiz_list;
+            }
         }
     } else {
-        console.log(response.status)
-        window.location = "../html/login.html"
+        window.location = "../html/login.html";
     }
 }
 
