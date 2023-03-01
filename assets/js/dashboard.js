@@ -13,7 +13,6 @@ async function getData() {
     });
     let data = await response.json()
     if (response.status === 200) {
-        console.log(data)
         user = data.user
         quiz_data = data['quiz-details']
         console.log(quiz_data.at(-1))
@@ -43,7 +42,30 @@ async function chechActive () {
     });
     let data = await response.json()
     if (response.status === 200) {
-        console.log('active')
+        let list = data['quiz-details']
+        var quiz_container = document.getElementsByClassName('quiz-section')[0]
+        for (let a = 0; a < list.length; a++) {
+            var quiz_list = `<div class="quiz">
+            <div class="quiz-details">
+                <div class="radio">
+                    <div class="radio-btn">
+                        <p class="details">${list[a]['quiz_title']}</p>
+                    </div>
+                    <div class="radio-btn">
+                        <p class="details">${list[a]['quiz_id']}</p>
+                    </div>
+                    <div class="radio-btn">
+                        <p class="details">${list[a]['subject']}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-button">
+                <a href="#"><button>View Winners</button></a>
+            </div>
+        </div>`
+            quiz_container.innerHTML = quiz_container.innerHTML + quiz_list;
+
+        }
     } else {
         console.log(response.status)
         window.location = "../html/login.html"
@@ -65,7 +87,6 @@ async function getQuiz() {
     })
     data = await response.json()
     if (response.status === 400) {
-        console.log(data.error);
         document.getElementById("response").innerHTML = data.error;
     } else {
         document.getElementById("response").innerHTML = data.success;
@@ -105,8 +126,27 @@ document.getElementById("start-btn").onclick = function() {
     quizStart();
 }
 
-window.setInterval(chechActive, 10000)
 
-chechActive()
+async function checkUserActive() {
+    let token = window.localStorage.getItem("access-token")
+    let username = window.sessionStorage.getItem("user")
+    if (username === null) {
+        window.location = "../html/login.html"
+    }
+    let response = await fetch("http://web-01.ayotech-py.tech/letsquiz_api/getdata", {
+        headers: {
+            'Authorization': 'Bearer ' + token,
+            'user': username,
+        }
+    });
+    let data = await response.json()
+    if (response.status === 200) {
+        console.log('active')
+    } else {
+        console.log(response.status)
+        window.location = "../html/login.html"
+    }
+}
+window.setInterval(checkUserActive, 10000)
 
 
