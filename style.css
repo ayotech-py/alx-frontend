@@ -232,11 +232,29 @@ footer {
 .handles {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
 .handles span {
     padding: 1rem;
+}
+
+.footer p {
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.handles {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    padding-bottom: 2rem;
 }
 
 @media (max-width: 650px) {

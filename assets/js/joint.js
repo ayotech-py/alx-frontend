@@ -3,7 +3,7 @@ let addUsers = []
 async function getJoinedUsers() {
     let quiz_id = window.sessionStorage.getItem("quiz_id")
 
-    let response = await fetch(`http://web-01.ayotech-py.tech/letsquiz_api/quiz_users/?quiz_id=${quiz_id}`)
+    let response = await fetch(`https://web-01.ayotech-py.tech/letsquiz_api/quiz_users/?quiz_id=${quiz_id}`)
     let data = await response.json()
     let names = data['data']
 

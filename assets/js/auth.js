@@ -14,7 +14,7 @@ async function signIn(){
 
     if (password_01 != '' && password_02 != '' && username != '' && email != '') {
         if (password_01 === password_02) {
-            let response = await fetch("http://web-01.ayotech-py.tech/letsquiz_api/register/", {
+            let response = await fetch("https://web-01.ayotech-py.tech/letsquiz_api/register/", {
                 method: "POST",
                 body: JSON.stringify({
                     "username": username,
@@ -41,7 +41,7 @@ async function signIn(){
 async function loginIn() {
     let password = document.getElementById("password").value;
     let username = document.getElementById("username").value;
-    let response = await fetch("http://web-01.ayotech-py.tech/letsquiz_api/login/", {
+    let response = await fetch("https://web-01.ayotech-py.tech/letsquiz_api/login/", {
         method: "POST",
         body: JSON.stringify({
             "username": username,

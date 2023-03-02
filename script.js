@@ -8,10 +8,10 @@ async function getData() {
     let token = window.localStorage.getItem("access-token")
     let username = window.sessionStorage.getItem("user")
     console.log(username)
-    let response = await fetch("http://web-01.ayotech-py.tech/letsquiz_api/getdata", {
+    let response = await fetch("https://web-01.ayotech-py.tech/letsquiz_api/getdata", {
         headers: {
             'Authorization': 'Bearer ' + token,
-            'Access-Control-Allow-Origin': 'http://127.0.0.1:8000',
+            'Access-Control-Allow-Origin': 'https://127.0.0.1:8000',
             'user': username,
         }
     });

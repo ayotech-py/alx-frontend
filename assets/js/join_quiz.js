@@ -5,7 +5,7 @@ async function joinQuiz() {
     window.sessionStorage.setItem("quiz_id", quiz_id);
     window.sessionStorage.setItem('name', quiz_name);
 
-    let response = await fetch('http://web-01.ayotech-py.tech/letsquiz_api/join_quiz/', {
+    let response = await fetch('https://web-01.ayotech-py.tech/letsquiz_api/join_quiz/', {
         method: "POST",
         body: JSON.stringify({
             "quiz_id": quiz_id,
