@@ -276,7 +276,6 @@ footer {
 
     .about-section   {
         flex-direction: column;
-        text-align: center;
     }
 
     .quiz-section .h1-text .about-text {
