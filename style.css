@@ -62,7 +62,7 @@ header ul li span, .btn-01 {
 }
 
 .text-1 {
-    color: rgb(134, 123, 123);
+    color: rgb(71, 63, 63);
 }
 
 .intro {
@@ -83,7 +83,7 @@ header ul li span, .btn-01 {
     padding-left: 25%;
     padding-right: 25%;
     line-height: 2rem;
-    color: rgb(134, 123, 123);
+    color: rgb(71, 63, 63);
 }
 
 span .btn-01 {
@@ -355,5 +355,9 @@ footer {
 
     .button button {
         margin: 5px;
+    }
+
+    .about {
+        margin-top: -3rem;
     }
 }
