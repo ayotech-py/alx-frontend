@@ -216,14 +216,27 @@ span .btn-01 {
 
 footer {
     background-color: rgb(2, 2, 100);
-    padding-top: 5rem;
-    padding-bottom: 5rem;
 }
 
 .footer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.footer h1 {
+    color: white;
+}
+
+.handles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.handles span {
+    padding: 1rem;
 }
 
 @media (max-width: 650px) {
