@@ -123,7 +123,6 @@ async function quizStart() {
 
 document.getElementById("start-btn").onclick = function() {
     let validQuiz = document.getElementById("quiz-head").innerHTML;
-    console.log(validQuiz.length)
     if (validQuiz.length > 10) {
         quizStart();
         window.location = "../html/joint_quiz.html"
