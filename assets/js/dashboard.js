@@ -97,6 +97,7 @@ async function getQuiz() {
 document.getElementById('quiz-btn').onclick = function() {
     getQuiz();
     getData();
+    location.reload();
 }
 
 async function quizStart() {
