@@ -41,6 +41,7 @@ function questionAction(index) {
             for(let i = 0; i < 4; i++){
                 option[i].innerHTML = answers[i]
             }
+            window.sessionStorage.setItem("correct", data[index].correctAnswer)
         }
     )
     questions.then(data => {
@@ -164,6 +165,9 @@ async function scoreBoard() {
         
         let user_name = class_name[a].getElementsByTagName('h3')[0]
         let user_score = class_name[a].getElementsByTagName('h2')[0]
+        
+        let ans = window.sessionStorage.getItem("correct");
+        document.getElementById("correct").innerHTML = `Correct Answer: ${ans}` 
         
         user_name.innerHTML = score_list[a][0]
         user_score.innerHTML = score_list[a][1]
