@@ -25,6 +25,7 @@ async function getData() {
         document.getElementById("quiz-subject").innerHTML = `Subject: ${quiz_subject}`
         document.getElementById("quiz-id").innerHTML = `ID: ${quiz_id}`
         document.getElementById("quiz-date").innerHTML = `Date: ${created_at.substring(0,10)}`
+        window.sessionStorage.setItem("quiz_id", quiz_id)
     }
 }
 
@@ -124,6 +125,7 @@ async function quizStart() {
 
 document.getElementById("start-btn").onclick = function() {
     quizStart();
+    window.location = "../html/joint_quiz.html"
 }
 
 
