@@ -122,8 +122,11 @@ async function quizStart() {
 
 
 document.getElementById("start-btn").onclick = function() {
-    quizStart();
-    window.location = "../html/joint_quiz.html"
+    let validQuiz = document.getElementById("quiz-head").innerHTML;
+    if (validQuiz.length > 6) {
+        quizStart();
+        window.location = "../html/joint_quiz.html"
+    }
 }
 
 
