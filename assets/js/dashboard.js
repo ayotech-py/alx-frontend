@@ -50,19 +50,16 @@ async function chechActive () {
             <div class="quiz-details">
                 <div class="radio">
                     <div class="radio-btn">
-                        <p class="details">${list[a]['quiz_title']}</p>
+                        <p class="details">Title: ${list[a]['quiz_title']}</p>
                     </div>
                     <div class="radio-btn">
-                        <p class="details">${list[a]['quiz_id']}</p>
+                        <p class="details">ID: ${list[a]['quiz_id']}</p>
                     </div>
                     <div class="radio-btn">
-                        <p class="details">${list[a]['subject']}</p>
+                        <p class="details">Subject: ${list[a]['subject']}</p>
                     </div>
                 </div>
             </div>
-                <div class="quiz-button">
-                    <a href="#"><button>View Winners</button></a>
-                </div>
             </div>`
             if (list[a]['status'] === true) {
                 quiz_container.innerHTML = quiz_container.innerHTML + quiz_list;
