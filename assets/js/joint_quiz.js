@@ -147,7 +147,9 @@ async function setScore(user_score) {
 async function scoreBoard() {
     let response = await fetch(`https://web-01.ayotech-py.tech/letsquiz_api/quiz_set_score/?quiz_id=${quiz_id}`)
     let data = await response.json()
-    let score_list = data.data
+    let score_list = data.data;
+
+    console.log(score_list);
     
     document.getElementsByTagName('main')[0].style.display = 'none';
     document.getElementsByTagName('aside')[0].style.display = 'block';
