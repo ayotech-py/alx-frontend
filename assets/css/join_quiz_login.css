@@ -63,3 +63,11 @@ h5 {
     color: rgb(131, 122, 122);
     margin-top: -10px;
 }
+
+form p {
+    line-height: 1rem;
+}
+
+form p {
+    margin-bottom: 1rem;
+}
