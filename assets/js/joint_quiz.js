@@ -166,8 +166,9 @@ async function scoreBoard() {
         let ans = window.sessionStorage.getItem("correct");
         document.getElementById("correct").innerHTML = `Correct Answer: ${ans}`
 
-        console.log(window.navigator.connection)
     }
+    console.log(window.navigator.connection)
+    console.log(window.navigator.connection.effectiveType.endsWith("2g"))
 }
 
 function nextPage() {
