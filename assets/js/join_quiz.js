@@ -20,5 +20,7 @@ async function joinQuiz() {
 }
 
 document.getElementById("quiz-btn").onclick = function() {
-    joinQuiz();
+    if (window.navigator.connection.effectiveType.endsWith("4g")) {
+        joinQuiz();
+    }
 }
