@@ -28,6 +28,6 @@ document.getElementById("quiz-btn").onclick = function() {
     } else if (window.navigator.connection.rrt <= 400 ) {
         joinQuiz();
     } else {
-        document.getElementById("error").innerHTML = `${window.navigator.connection.effectiveType.endsWith("4g")}`;
+        document.getElementById("error").innerHTML = `${window.navigator.connection.effectiveType.endsWith("4g")} | ${window.navigator.connection.effectiveType} | ${window.navigator.connection.rrt}`;
     }
 }
