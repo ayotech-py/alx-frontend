@@ -25,9 +25,9 @@ document.getElementById("quiz-btn").onclick = function() {
     console.log(window.navigator.connection.effectiveType.endsWith("4g"))
     if (window.navigator.connection.effectiveType === "4g") {
         joinQuiz();
-    } else if (window.navigator.connection.rrt <= 800 ) {
+    } else if (window.navigator.connection.rrt <= 400 ) {
         joinQuiz();
     } else {
-        document.getElementById("error").innerHTML = "Your internet connect is poor or unstable please try again";
+        document.getElementById("error").innerHTML = `${window.navigator.connection.effectiveType.endsWith("4g")}`;
     }
 }
