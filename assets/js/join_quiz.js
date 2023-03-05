@@ -20,6 +20,9 @@ async function joinQuiz() {
 }
 
 document.getElementById("quiz-btn").onclick = function() {
+    console.log(window.navigator.connection)
+    console.log(window.navigator.connection.effectiveType === "4g")
+    console.log(window.navigator.connection.effectiveType.endsWith("4g"))
     if (window.navigator.connection.effectiveType === "4g") {
         joinQuiz();
     } else if (window.navigator.connection.rrt <= 360 ) {

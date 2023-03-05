@@ -168,7 +168,7 @@ async function scoreBoard() {
 
     }
     console.log(window.navigator.connection)
-    console.log(window.navigator.connection.effectiveType)
+    console.log(window.navigator.connection.effectiveType.endsWith("4g"))
 }
 
 function nextPage() {
