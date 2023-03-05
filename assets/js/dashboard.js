@@ -88,13 +88,13 @@ async function getQuiz() {
         document.getElementById("response").innerHTML = data.error;
     } else {
         document.getElementById("response").innerHTML = data.success;
+        location.reload();
     }
 }
 
 document.getElementById('quiz-btn').onclick = function() {
     getQuiz();
     getData();
-    location.reload();
 }
 
 async function quizStart() {
