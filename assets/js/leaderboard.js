@@ -16,6 +16,7 @@ async function scoreBoard() {
     }
     for (let a = 0; a < score_list.length; a++) {
         if (score_list[a][0] === my_name) {
+            console.log(score_list[a][0] === my_name)
             document.getElementById('my_name').innerHTML = score_list[a][0];
             document.getElementById('my_score').innerHTML = score_list[a][1];
         }

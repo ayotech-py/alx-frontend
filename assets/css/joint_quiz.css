@@ -163,6 +163,10 @@ aside {
     display: none;
 }
 
+.correct h4 {
+    line-height: 1rem;
+}
+
 @media (max-width: 650px) {
     main, aside {
         width: 90%;
