@@ -20,14 +20,11 @@ async function joinQuiz() {
 }
 
 document.getElementById("quiz-btn").onclick = function() {
-    console.log(window.navigator.connection)
-    console.log(window.navigator.connection.effectiveType === "4g")
-    console.log(window.navigator.connection.effectiveType.endsWith("4g"))
     if (window.navigator.connection.effectiveType === "4g") {
         joinQuiz();
-    } else if (window.navigator.connection.rrt <= 400 ) {
+    } else if (window.navigator.connection.rtt <= 400 ) {
         joinQuiz();
     } else {
-        document.getElementById("error").innerHTML = `${window.navigator.connection.effectiveType.endsWith("4g")} | ${window.navigator.connection.effectiveType} | ${window.navigator.connection.rtt}`;
+        document.getElementById("error").innerHTML = `Unable to join quiz due to poor or unstable network, please try again`;
     }
 }
