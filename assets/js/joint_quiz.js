@@ -149,28 +149,30 @@ async function scoreBoard() {
     let data = await response.json()
     let score_list = data.data
     
+    console.log(score_list.length)
+
     document.getElementsByTagName('main')[0].style.display = 'none';
     document.getElementsByTagName('aside')[0].style.display = 'block';
     
-    var class_name = document.getElementsByClassName("radio-btnn")
+    let set_score = document.getElementById('scores');
+    set_score.innerHTML = "";
     
-    for (let a = 0; a < class_name.length; a++) {
+    for (let a = 0; a < score_list.length; a++) {
         
-        class_name[a].style.display = 'flex';
-        class_name[a].style.justifyContent = 'space-between';
+        let user_score = `<div class="radio-btnn" style="display: flex; justify-content: space-between;">
+                <h3 style="lineHeight: 0">${score_list[a][0]}</h3>
+                <h3 style="lineHeight: 0">${score_list[a][1]}</h3>
+            </div>`
         
-        class_name[a].getElementsByTagName('h3')[0].style.lineHeight = 0;
-        class_name[a].getElementsByTagName('h2')[0].style.lineHeight = 0;
+        set_score.innerHTML = set_score.innerHTML + user_score;
         
-        
-        let user_name = class_name[a].getElementsByTagName('h3')[0]
-        let user_score = class_name[a].getElementsByTagName('h2')[0]
+        var class_name = document.getElementsByClassName("radio-btnn")
+        console.log(class_name)
         
         let ans = window.sessionStorage.getItem("correct");
         document.getElementById("correct").innerHTML = `Correct Answer: ${ans}` 
         
-        user_name.innerHTML = score_list[a][0]
-        user_score.innerHTML = score_list[a][1]
+        console.log(set_score)
     }
 }
 
