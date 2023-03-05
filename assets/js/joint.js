@@ -31,3 +31,7 @@ setInterval(function(){
 }, 500)
 
 getJoinedUsers();
+
+console.log(window.navigator.connection)
+console.log(window.navigator.connection.effectiveType === "4g")
+console.log(window.navigator.connection.effectiveType.endsWith("4g"))
