@@ -149,10 +149,6 @@ async function scoreBoard() {
     let data = await response.json()
     let score_list = data.data;
 
-    console.log(score_list);
-    
-    console.log(score_list.length)
-
     document.getElementsByTagName('main')[0].style.display = 'none';
     document.getElementsByTagName('aside')[0].style.display = 'block';
     
