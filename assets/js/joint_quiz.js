@@ -164,7 +164,9 @@ async function scoreBoard() {
         set_score.innerHTML = set_score.innerHTML + user_score;
         
         let ans = window.sessionStorage.getItem("correct");
-        document.getElementById("correct").innerHTML = `Correct Answer: ${ans}` 
+        document.getElementById("correct").innerHTML = `Correct Answer: ${ans}`
+
+        console.log(window.navigator.connection)
     }
 }
 
