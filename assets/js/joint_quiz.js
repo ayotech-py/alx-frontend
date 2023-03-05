@@ -167,12 +167,9 @@ async function scoreBoard() {
         set_score.innerHTML = set_score.innerHTML + user_score;
         
         var class_name = document.getElementsByClassName("radio-btnn")
-        console.log(class_name)
         
         let ans = window.sessionStorage.getItem("correct");
         document.getElementById("correct").innerHTML = `Correct Answer: ${ans}` 
-        
-        console.log(set_score)
     }
 }
 
