@@ -65,7 +65,8 @@ h5 {
 }
 
 form p {
-    line-height: .9rem;
+    line-height: 1rem;
+    font: .8rem;
 }
 
 form p {
