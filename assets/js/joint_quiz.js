@@ -57,7 +57,6 @@ function questionAction(index) {
             
                 if (seconds <= 0){
                     let quiz_score = window.sessionStorage.getItem("quiz_score");
-                    console.log(quiz_score)
                     setScore(quiz_score);
                     clearInterval(timeDuration)
                 } else if (seconds > 9) {
