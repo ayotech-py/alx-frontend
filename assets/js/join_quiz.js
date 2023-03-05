@@ -13,9 +13,12 @@ async function joinQuiz() {
         })
     })
     let data = await response.json();
+    console.log(data)
     if (response.status === 200) {
         console.log(data.success)
         window.location = "./joint.html"
+    } else {
+        document.getElementById("error").innerHTML = `Quiz ID not found, please enter a valid Quiz ID`;
     }
 }
 
