@@ -46,28 +46,13 @@ async function quizStart(param_1, param_2) {
 }
 
 //This jQuery redirect user back to the join quiz page when back button is clicked
-window.addEventListener('popstate', function(event) {
-    // The popstate event is fired each time when the current history entry changes.
-
-    var r = confirm("You pressed a Back button! Are you sure?!");
-    console.log(r)
-
-    if (r == true) {
-        // Call Back button programmatically as per user confirmation.
-        history.back();
-        // Uncomment below line to redirect to the previous page instead.
-        // window.location = document.referrer // Note: IE11 is not supporting this.
-    } else {
-        // Stay on the current page.
-        history.pushState(null, null, window.location.pathname);
-    }
-
-    history.pushState(null, null, window.location.pathname);
-
-}, false);
 
 
 console.log("script updated v2")
 
 scoreBoard();
 quizStart(false, true);
+
+if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_BACK_FORWARD) {
+    window.location = '../html/join_quiz_login.html';
+}
