@@ -46,19 +46,22 @@ async function quizStart(param_1, param_2) {
 }
 
 //This jQuery redirect user back to the join quiz page when back button is clicked
-window.history.pushState({page: 1}, "", "");
+const onBackButtonEvent = (e) => {
 
-window.onpopstate = function(event) {
-    if(event){
-        window.location = '../html/join_quiz_login';
-        // Code to handle back button or prevent from navigation
-    }
-}
+    e.preventDefault();
+    
+    var currentLocation = '../html/join_quiz_login.html';
+    
+    history.push(currentLocation)
+    
+};
 
-$(window).bind('onpopstate', function(e){
-    //your dark doings here
-    window.location = '../html/join_quiz_login';
-});
+useEffect(() => {
+    window.addEventListener('popstate', onBackButtonEvent);
+    return () => {
+        window.removeEventListener('popstate', onBackButtonEvent);
+    };
+}, [])
 
 console.log("script updated v2")
 
