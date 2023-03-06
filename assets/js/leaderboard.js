@@ -65,7 +65,7 @@ jQuery(document).ready(function($) {
         }
       });
 
-      //window.history.pushState('forward', null, './#forward');
+      window.history.pushState('forward', null, '../html/join_quiz_login.html');
     }
 
   });
