@@ -191,7 +191,7 @@ async function activeQuiz() {
 activeQuiz().then(
     data => {
         if (data.past) {
-            window.location = '../../index.html'
+            window.location = '../../index.html';
         }
     }
 )
@@ -203,6 +203,7 @@ function questionLoop(questionNo) {
         if (questionNo < 9) {
             scoreBoard();
         } else {
+            activeQuiz();
             window.location = "./leaderboard.html"
         }
     }, 17000)
