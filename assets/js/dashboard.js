@@ -59,9 +59,6 @@ async function chechActive () {
                         <p class="details">Subject: ${list[a]['subject']}</p>
                     </div>
                 </div>
-                <div class="quiz-button">
-                <button id="end_quiz">End Quiz</button>
-            </div>
             </div>
             </div>`
             if (list[a]['status'] === true) {
@@ -100,13 +97,13 @@ document.getElementById('quiz-btn').onclick = function() {
     getData();
 }
 
-async function quizStart() {
+async function quizStart(param_1, param_2) {
     let username = window.sessionStorage.getItem("user")
     let access = window.localStorage.getItem("access-token")
     let response = await fetch('https://web-01.ayotech-py.tech/letsquiz_api/quiz_status/', {
         method: 'POST',
         body: JSON.stringify({
-            'status': true,
+            param_1: param_2,
         }),
         headers: {
             "Authorization": 'Bearer ' + access,
@@ -127,9 +124,13 @@ async function quizStart() {
 document.getElementById("start-btn").onclick = function() {
     let validQuiz = document.getElementById("quiz-head").innerHTML;
     if (validQuiz.length > 10) {
-        quizStart();
+        quizStart("status", true);
         window.location = "../html/joint_quiz.html"
     }
+}
+
+document.getElementById("end_quiz").onclick = function() {
+    quizStart("past", true);
 }
 
 
@@ -154,5 +155,3 @@ async function checkUserActive() {
     }
 }
 window.setInterval(checkUserActive, 10000)
-
-
