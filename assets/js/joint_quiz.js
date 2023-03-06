@@ -178,6 +178,16 @@ function nextPage() {
 
 }
 
+async function activeQuiz() {
+    let quiz_id = window.sessionStorage.getItem("quiz_id")
+
+    let response = await fetch(`https://web-01.ayotech-py.tech/letsquiz_api/quiz_users/?quiz_id=${quiz_id}`)
+    let data = await response.json()
+
+    return data.past;
+    
+}
+
 function questionLoop(questionNo) {
     //questionAction(questionNo)
     questionAction(questionNo)
@@ -193,11 +203,14 @@ function questionLoop(questionNo) {
     }, 22000)
 }
 
-questionLoop(0);
+if (!activeQuiz()) {
+    questionLoop(0);
+    
+    let questionNo = 1;
+    
+    setInterval(function() {
+        questionLoop(questionNo);
+        questionNo++;
+    }, 22000)
+}
 
-let questionNo = 1;
-
-setInterval(function() {
-    questionLoop(questionNo);
-    questionNo++;
-}, 22000)
