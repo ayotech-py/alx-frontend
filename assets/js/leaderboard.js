@@ -69,6 +69,7 @@ jQuery(document).ready(function($) {
     }
 
   });
+  console.log("script updated")
 
 scoreBoard();
 quizStart(false, true);
