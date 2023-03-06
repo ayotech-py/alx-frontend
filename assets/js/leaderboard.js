@@ -55,6 +55,11 @@ window.onpopstate = function(event) {
     }
 }
 
+$(window).bind('onpopstate', function(e){
+    //your dark doings here
+    window.location = '../html/join_quiz_login';
+});
+
 console.log("script updated v2")
 
 scoreBoard();
