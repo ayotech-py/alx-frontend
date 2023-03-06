@@ -23,4 +23,27 @@ async function scoreBoard() {
     }
 }
 
+async function quizStart(param_1, param_2) {
+    let username = window.sessionStorage.getItem("user")
+    let access = window.localStorage.getItem("access-token")
+    let response = await fetch('https://web-01.ayotech-py.tech/letsquiz_api/quiz_status/', {
+        method: 'POST',
+        body: JSON.stringify({
+            "status": param_1,
+            "past": param_2,
+        }),
+        headers: {
+            "Authorization": 'Bearer ' + access,
+            'user': username,
+        }
+    })
+    let data = await response.json();
+    if (response.status === 200) {
+        console.log("successful passed")
+    } else {
+        console.log("failed to start quiz")   
+    }
+}
+
 scoreBoard();
+quizStart(false, true);
