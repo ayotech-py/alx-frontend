@@ -97,13 +97,14 @@ document.getElementById('quiz-btn').onclick = function() {
     getData();
 }
 
-async function quizStart(param_1, param_2) {
+async function quizStart(param_1, param_2, param_3, param_4) {
     let username = window.sessionStorage.getItem("user")
     let access = window.localStorage.getItem("access-token")
     let response = await fetch('https://web-01.ayotech-py.tech/letsquiz_api/quiz_status/', {
         method: 'POST',
         body: JSON.stringify({
             param_1: param_2,
+            param_3: param_4,
         }),
         headers: {
             "Authorization": 'Bearer ' + access,
@@ -124,13 +125,13 @@ async function quizStart(param_1, param_2) {
 document.getElementById("start-btn").onclick = function() {
     let validQuiz = document.getElementById("quiz-head").innerHTML;
     if (validQuiz.length > 10) {
-        quizStart("status", true);
+        quizStart("status", true, "past", false);
         window.location = "../html/joint_quiz.html"
     }
 }
 
 document.getElementById("end_quiz").onclick = function() {
-    quizStart("past", true);
+    quizStart("past", true, "status", false);
 }
 
 
