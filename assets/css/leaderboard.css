@@ -184,3 +184,12 @@ body {
 .rank .num{
   margin: 0 !important; 
 }
+
+.sort button {
+  color: white;
+  border: none;
+}
+
+.sort {
+  margin-top: 1rem;
+}
