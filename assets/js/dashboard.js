@@ -131,11 +131,6 @@ document.getElementById("start-btn").onclick = function() {
     }
 }
 
-document.getElementById("end_quiz").onclick = function() {
-    quizStart(false, true);
-}
-
-
 async function checkUserActive() {
     let token = window.localStorage.getItem("access-token")
     let username = window.sessionStorage.getItem("user")
