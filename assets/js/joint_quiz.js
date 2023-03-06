@@ -167,8 +167,6 @@ async function scoreBoard() {
         document.getElementById("correct").innerHTML = `Correct Answer: ${ans}`
 
     }
-    console.log(window.navigator.connection)
-    console.log(window.navigator.connection.effectiveType.endsWith("4g"))
 }
 
 function nextPage() {
