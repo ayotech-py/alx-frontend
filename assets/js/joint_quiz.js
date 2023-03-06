@@ -189,7 +189,6 @@ async function activeQuiz() {
 }
 
 async function quizStart(param_1, param_2) {
-    console.log(param_1)
     let username = window.sessionStorage.getItem("user")
     let access = window.localStorage.getItem("access-token")
     let response = await fetch('https://web-01.ayotech-py.tech/letsquiz_api/quiz_status/', {
