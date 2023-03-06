@@ -178,16 +178,6 @@ function nextPage() {
 
 }
 
-async function activeQuiz() {
-    let quiz_id = window.sessionStorage.getItem("quiz_id")
-
-    let response = await fetch(`https://web-01.ayotech-py.tech/letsquiz_api/quiz_users/?quiz_id=${quiz_id}`)
-    let data = await response.json()
-
-    return data;
-    
-}
-
 function questionLoop(questionNo) {
     //questionAction(questionNo)
     questionAction(questionNo)
@@ -211,11 +201,3 @@ setInterval(function() {
     questionLoop(questionNo);
     questionNo++;
 }, 22000)
-
-activeQuiz().then(
-    data => {
-        if (data.past) {
-            window.location = '../../index.html';
-        }
-    }
-)
