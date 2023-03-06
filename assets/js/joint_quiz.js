@@ -188,13 +188,28 @@ async function activeQuiz() {
     
 }
 
-activeQuiz().then(
-    data => {
-        if (data.past) {
-            window.location = '../../index.html';
+async function quizStart(param_1, param_2) {
+    console.log(param_1)
+    let username = window.sessionStorage.getItem("user")
+    let access = window.localStorage.getItem("access-token")
+    let response = await fetch('https://web-01.ayotech-py.tech/letsquiz_api/quiz_status/', {
+        method: 'POST',
+        body: JSON.stringify({
+            "status": param_1,
+            "past": param_2,
+        }),
+        headers: {
+            "Authorization": 'Bearer ' + access,
+            'user': username,
         }
+    })
+    let data = await response.json();
+    if (response.status === 200) {
+        console.log("successful passed")
+    } else {
+        console.log("failed to start quiz")
     }
-)
+}
 
 function questionLoop(questionNo) {
     //questionAction(questionNo)
@@ -203,7 +218,7 @@ function questionLoop(questionNo) {
         if (questionNo < 9) {
             scoreBoard();
         } else {
-            activeQuiz();
+            quizStart(false, true);
             window.location = "./leaderboard.html"
         }
     }, 17000)
@@ -220,3 +235,11 @@ setInterval(function() {
     questionLoop(questionNo);
     questionNo++;
 }, 22000)
+
+activeQuiz().then(
+    data => {
+        if (data.past) {
+            window.location = '../../index.html';
+        }
+    }
+)
