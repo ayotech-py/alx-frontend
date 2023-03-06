@@ -45,6 +45,7 @@ async function quizStart(param_1, param_2) {
     }
 }
 
+//This jQuery redirect user back to the join quiz page when back button is clicked
 jQuery(document).ready(function($) {
 
     if (window.history && window.history.pushState) {
