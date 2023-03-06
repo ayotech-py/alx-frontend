@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/leaderboard.css">
+    <script type="text/javascript">
+      function func() {
+        if(window.history.previous) {
+          window.location.href = '../html/join_quiz_login';
+        }
+      }
+    </script>
 </head>
-<body>
+<body onunload="func()">
     <div class="card one">
         <div class="header">
           <i class="arrow fas fa-chevron-left"></i>

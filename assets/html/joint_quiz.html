@@ -23,9 +23,15 @@
                 }
             }
         )
+        console.log(window.history.previous)
+        function func() {
+            if(window.history.previous) {
+                window.location.href = '../html/join_quiz_login';
+            }
+        }
     </script>
 </head>
-<body>
+<body onunload="func()">
     <main class="container">
         <section class="quiz-container">
             <div class="heading">
