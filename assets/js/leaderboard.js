@@ -55,13 +55,13 @@ const onBackButtonEvent = (e) => {
     history.push(currentLocation)
     
 };
+window.addEventListener('popstate', onBackButtonEvent);
 
-useEffect(() => {
-    window.addEventListener('popstate', onBackButtonEvent);
+/* useEffect(() => {
     return () => {
         window.removeEventListener('popstate', onBackButtonEvent);
     };
-}, [])
+}, []) */
 
 console.log("script updated v2")
 
