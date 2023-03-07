@@ -108,17 +108,21 @@ function shuffleArray(array) {
 function markBtn(no) {
     let time = 1500;
     document.getElementById("answer-01").onclick = function() {
+        console.log(time)
         CorrectAnswer(no, time)
     }
     document.getElementById("answer-02").onclick = function() {
+        console.log(time)
         CorrectAnswer(no, time)
     }
     
     document.getElementById("answer-03").onclick = function() {
+        console.log(time)
         CorrectAnswer(no, time)
     }
     
     document.getElementById("answer-04").onclick = function() {
+        console.log(time)
         CorrectAnswer(no, time)
     }
     setInterval(function() {
@@ -160,7 +164,7 @@ async function scoreBoard() {
                 <h3 style="lineHeight: 0">${score_list[a][0]}</h3>
                 <h3 style="lineHeight: 0">${score_list[a][1]}</h3>
             </div>`
-        
+        console.log(`${score_list[a][0]} | ${score_list[a][1]}`)
         set_score.innerHTML = set_score.innerHTML + user_score;
         
         let ans = window.sessionStorage.getItem("correct");
@@ -185,7 +189,6 @@ function questionLoop(questionNo) {
         if (questionNo < 9) {
             scoreBoard();
         } else {
-            //window.location = "./leaderboard.html"
             window.location.replace("./leaderboard.html")
         }
     }, 17000)

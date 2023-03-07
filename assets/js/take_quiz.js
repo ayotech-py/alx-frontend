@@ -141,7 +141,7 @@ document.getElementById("submit-btn").onclick = function() {
 
 setTimeout(function(){
     Result();
-    window.location = "./end_quiz.html";
+    window.location.replace("./end_quiz.html")
 }, 120000)
 
 var seconds = 60;

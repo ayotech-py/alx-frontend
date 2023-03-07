@@ -1,7 +1,3 @@
-getData();
-chechActive();
-document.getElementById("logged_in_user").innerHTML = `WELCOME BACK ${window.sessionStorage.getItem('user').toUpperCase()}`
-
 async function getData() {
     let token = window.localStorage.getItem("access-token")
     let username = window.sessionStorage.getItem("user")
