@@ -18,7 +18,8 @@ async function joinQuiz() {
         console.log(data.success)
         window.location = "./joint.html"
     } else {
-        document.getElementById("error").innerHTML = `Quiz ID not found, please enter a valid Quiz ID`;
+        console.log(data )
+        document.getElementById("error").innerHTML = data.error || data.name;
     }
 }
 
