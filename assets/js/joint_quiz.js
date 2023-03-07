@@ -185,7 +185,8 @@ function questionLoop(questionNo) {
         if (questionNo < 9) {
             scoreBoard();
         } else {
-            window.location.replace("../html/join_quiz_login.html");
+            window.location = "./leaderboard.html"
+            window.location.replace("join_quiz_login.html")
             window.location = "./leaderboard.html"
         }
     }, 17000)

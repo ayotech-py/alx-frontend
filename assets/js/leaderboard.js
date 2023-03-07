@@ -52,3 +52,5 @@ console.log("script updated v2")
 
 scoreBoard();
 quizStart(false, true);
+
+//window.location.replace("join_quiz_login.html")
