@@ -186,8 +186,7 @@ function questionLoop(questionNo) {
             scoreBoard();
         } else {
             //window.location = "./leaderboard.html"
-            window.location.replace("join_quiz_login.html")
-            window.location = "./leaderboard.html"
+            window.location.replace("./leaderboard.html")
         }
     }, 17000)
     setTimeout(function(){
