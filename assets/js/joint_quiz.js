@@ -1,5 +1,5 @@
 let quiz_id = window.sessionStorage.getItem("quiz_id");
-window.sessionStorage.setItem("quiz_score", 0);
+window.sessionStorage.setItem("quiz_score", 00);
 
 
 //This function fetchs the question
