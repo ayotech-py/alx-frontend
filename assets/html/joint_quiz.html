@@ -6,25 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Take Quiz</title>
     <link rel="stylesheet" href="../css/joint_quiz.css">
-    <script>
-        async function activeQuiz() {
-            let quiz_id = window.sessionStorage.getItem("quiz_id")
-        
-            let response = await fetch(`https://web-01.ayotech-py.tech/letsquiz_api/quiz_users/?quiz_id=${quiz_id}`)
-            let data = await response.json()
-        
-            return data;
-            
-        }
-        activeQuiz().then(
-            data => {
-                if (data.past) {
-                    window.location = '../../index.html';
-                }
-            }
-        )
-
-    </script>
 </head>
 <body onunload="func()">
     <main class="container">
