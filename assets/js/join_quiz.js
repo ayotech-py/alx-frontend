@@ -29,7 +29,6 @@ document.getElementById("quiz-btn").onclick = function() {
     } else if (window.navigator.connection.rtt <= 400 ) {
         joinQuiz();
     } else {
-        joinQuiz();
         document.getElementById("error").innerHTML = `Unable to join quiz due to poor or unstable network, please try again`;
     }
 }
