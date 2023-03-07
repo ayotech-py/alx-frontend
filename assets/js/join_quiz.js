@@ -19,7 +19,7 @@ async function joinQuiz() {
         window.location = "./joint.html"
     } else {
         console.log(data )
-        document.getElementById("error").innerHTML = data.error || data.name;
+        document.getElementById("error").innerHTML = data.error || 'This field is required';
     }
 }
 
