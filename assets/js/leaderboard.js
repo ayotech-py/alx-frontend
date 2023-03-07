@@ -53,6 +53,9 @@ console.log("script updated v2")
 scoreBoard();
 quizStart(false, true);
 
-if (window.performance && window.performance.navigation.type != window.performance.navigation.TYPE_BACK_FORWARD) {
-    window.location = '../html/join_quiz_login.html';
+function backButtonEvent() {
+    //history.go(-2);
+    window.history.go(-2)
+    //window.History.go(-2);
+    console.log("Browser back button is clicked...");
 }
