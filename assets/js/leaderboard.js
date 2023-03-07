@@ -53,6 +53,6 @@ console.log("script updated v2")
 scoreBoard();
 quizStart(false, true);
 
-if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_RESERVED) {
+if (window.performance && window.performance.navigation.type == window.performance.navigation.TYPE_RESERVE) {
     window.location = '../html/join_quiz_login.html';
 }
