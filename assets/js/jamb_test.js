@@ -20,6 +20,7 @@ function questionAction(question, index) {
         option[i].innerHTML = answers[i]
     }
     console.log(question[index].answer)
+    console.log(correct_answers.push(questions[index].option[questions[index].answer]))
 }
 
 
@@ -96,7 +97,7 @@ document.getElementById("previous-btn").onclick = function() {
 function Result(){
     var cal_score = 0;
     for (let a = 0; a < questions.length; a++) {
-        correct_answers.push(questions[index].option[questions[a].answer]);
+        correct_answers.push(questions[a].option[questions[a].answer]);
     }
     for (let i = 0; i < user_answers.length; i++) {
         if (correct_answers[i] === user_answers[i]) {
