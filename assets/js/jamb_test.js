@@ -2,11 +2,11 @@ let rate = window.localStorage.getItem("rate");
 let title = window.localStorage.getItem("title");
 let questions = JSON.parse(window.sessionStorage.questions)
 
-let count = 1;
+let count = 0;
 
 let status_no = [];
 
-let user_answers = ['butterfly'];
+let user_answers = [];
 let correct_answers = [];
 
 function questionAction(question, index) {
