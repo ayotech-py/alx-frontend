@@ -6,7 +6,7 @@ let count = 1;
 
 let status_no = [];
 
-let user_answers = [];
+let user_answers = ['butterfly'];
 let correct_answers = [];
 
 function questionAction(question, index) {
@@ -96,7 +96,7 @@ document.getElementById("previous-btn").onclick = function() {
 function Result(){
     var cal_score = 0;
     for (let a = 0; a < questions.length; a++) {
-        correct_answers.push(question[index].option[questions[a].answer]);
+        correct_answers.push(questions[index].option[questions[a].answer]);
     }
     for (let i = 0; i < user_answers.length; i++) {
         if (correct_answers[i] === user_answers[i]) {
