@@ -12,7 +12,7 @@ let correct_answers = [];
 function questionAction(question, index) {
     document.getElementById("subject-title").innerHTML = window.sessionStorage.subject;
     document.getElementById("question-no").innerHTML = `Question ${index + 1} of 40`;
-    let edit_section = 'When three coplanar; non-parallel; forces are in; equilibrium i.; they can be represented'
+    let edit_section = question[index].section;
     document.getElementById("question").innerHTML = question[index].question;
     document.getElementById("section").innerHTML = edit_section.replaceAll(";", '<br>');
     document.getElementsByTagName('img')[0].src = question[index].image;
