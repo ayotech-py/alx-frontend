@@ -12,7 +12,8 @@ let correct_answers = [];
 function questionAction(question, index) {
     document.getElementById("subject-title").innerHTML = window.sessionStorage.subject;
     document.getElementById("question-no").innerHTML = `Question ${index + 1} of 40`;
-    document.getElementById("question").innerHTML = question[index].question;
+    let edit_question = question[index].question
+    document.getElementById("question").innerHTML = edit_question.replace(";", '<br>');
     document.getElementById("section").innerHTML = question[index].section;
     document.getElementsByTagName('img')[0].src = question[index].image;
     let answers = [question[index].option.a, question[index].option.b, question[index].option.c, question[index].option.d];
