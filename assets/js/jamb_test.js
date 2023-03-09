@@ -14,7 +14,7 @@ function questionAction(question, index) {
     document.getElementById("question-no").innerHTML = `Question ${index + 1} of 40`;
     document.getElementById("question").innerHTML = question[index].question;
     document.getElementById("section").innerHTML = question[index].section;
-    document.getElementsByTagName('img')[0].src = 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80';
+    document.getElementsByTagName('img')[0].src.innerHTML = 'https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80';
     let answers = [question[index].option.a, question[index].option.b, question[index].option.c, question[index].option.d];
     let option = document.getElementById("answers")
     option = option.getElementsByTagName("label")
