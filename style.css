@@ -462,4 +462,10 @@ form h5 {
     .about {
         margin-top: -3rem;
     }
+
+    form {
+        width: 80%;
+        padding: 2rem;
+        margin-left: 10%;
+    }
 }
