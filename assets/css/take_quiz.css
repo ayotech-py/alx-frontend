@@ -78,9 +78,9 @@ main {
     font-weight: bold;
 }
 
-.image {
-    height: 40px;
-    width: 40px;
+.image img {
+    height: 100px;
+    width: 100px;
 }
 
 .answers {
