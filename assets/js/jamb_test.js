@@ -13,6 +13,7 @@ function questionAction(question, index) {
     document.getElementById("subject-title").innerHTML = window.sessionStorage.subject;
     document.getElementById("question-no").innerHTML = `Question ${index + 1} of 40`;
     document.getElementById("question").innerHTML = question[index].question;
+    document.getElementsByTagName('img')[0].src = question[index].image;
     let answers = [question[index].option.a, question[index].option.b, question[index].option.c, question[index].option.d];
     let option = document.getElementById("answers")
     option = option.getElementsByTagName("label")
