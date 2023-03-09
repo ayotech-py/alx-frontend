@@ -78,6 +78,10 @@ main {
     font-weight: bold;
 }
 
+.image {
+    height: 40px;
+}
+
 .answers {
     margin-left: 10%;
     margin-right: 10%;
