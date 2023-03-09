@@ -42,9 +42,9 @@ function timeManager() {
             clearInterval(timeDuration);
         } else {
             if (seconds < 10) {
-                document.getElementById("duration").innerHTML = `Time remaining: 0${minute} : 0${seconds}`
+                document.getElementById("duration").innerHTML = `Time remaining: ${minute} : 0${seconds}`
             } else {
-                document.getElementById("duration").innerHTML = `Time remaining: 0${minute} : ${seconds}`
+                document.getElementById("duration").innerHTML = `Time remaining: ${minute} : ${seconds}`
             }
         }
     }, 1000);
