@@ -13,7 +13,7 @@ function questionAction(question, index) {
     document.getElementById("subject-title").innerHTML = window.sessionStorage.subject;
     document.getElementById("question-no").innerHTML = `Question ${index + 1} of 40`;
     document.getElementById("question").innerHTML = question[index].question;
-    document.getElementsByTagName('img')[0].src = question[index].image;
+    document.getElementsByTagName('img')[0].src.innerHTML = question[index].image;
     let answers = [question[index].option.a, question[index].option.b, question[index].option.c, question[index].option.d];
     let option = document.getElementById("answers")
     option = option.getElementsByTagName("label")
@@ -35,7 +35,7 @@ function timeManager() {
         
         if (seconds == 0){
             minute--;
-            seconds = 60;
+            seconds = 59;
             document.getElementById("duration").innerHTML = `Time remaining: 0${minute} : ${seconds}`
         } else if(minute <= 0 && seconds < 1) {
             document.getElementById("duration").innerHTML = `Time remaining: 00 : 00`
