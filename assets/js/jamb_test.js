@@ -11,15 +11,15 @@ let correct_answers = [];
 
 function questionAction(question, index) {
     document.getElementById("subject-title").innerHTML = window.sessionStorage.subject;
-    document.getElementById("question-no").innerHTML = `Question ${count} of 40`;
+    document.getElementById("question-no").innerHTML = `Question ${index + 1} of 40`;
     document.getElementById("question").innerHTML = question[index].question;
-    let answers = [question[index].option.a, question[index].option.b, question[index].option.c, question[index].option.d, question[index].option.e];
+    let answers = [question[index].option.a, question[index].option.b, question[index].option.c, question[index].option.d];
     let option = document.getElementById("answers")
     option = option.getElementsByTagName("label")
-    for(let i = 0; i < 5; i++){
+    for(let i = 0; i < 4; i++){
         option[i].innerHTML = answers[i]
     }
-    console.log(question[index].answer)
+    //console.log(question[index].answer)
     console.log(correct_answers.push(questions[index].option[questions[index].answer]))
 }
 
@@ -51,27 +51,30 @@ function timeManager() {
 
 
 document.getElementById("next-btn").onclick = function() {
+    nextButton();
+}
+
+function nextButton() {
+    if (count !== 0) {
+        let answer = document.querySelectorAll('input[name="fav_language"]');
+        let selectedAnswer = document.getElementsByTagName("label")
+        for (var a = 0; a < answer.length; a++) {
+            if (answer[a].checked == true) {
+                user_answers.push(selectedAnswer[a].innerHTML);
+            }
+        }
+        
+        if (answer[0].checked != true && answer[1].checked != true && answer[2].checked != true & answer[3].checked != true) {
+            user_answers.push("None");
+        }
+    }
+    
+    
     if (count == 40) {
         Result();
         document.getElementById("next-btn").innerHTML = `<a href="./end_quiz.html"><button class="btn-01" id="next-btn">Submit</button></a>`;
-    }
-    if (count < 40) {
+    } else if(count < 40) {
         questionAction(questions, count);
-    }
-    status_no[0] = count;
-    count++;
-
-    
-    let answer = document.querySelectorAll('input[name="fav_language"]');
-    let selectedAnswer = document.getElementsByTagName("label")
-    for (var a = 0; a < answer.length; a++) {
-        if (answer[a].checked == true) {
-            user_answers.push(selectedAnswer[a].innerHTML);
-        }
-    }
-
-    if (answer[0].checked != true && answer[1].checked != true && answer[2].checked != true & answer[3].checked != true) {
-        user_answers.push("None");
     }
     
     var elements = document.getElementsByTagName("input");
@@ -81,16 +84,18 @@ document.getElementById("next-btn").onclick = function() {
             elements[i].checked = false;
         }
     }
-    console.log(correct_answers)
-    console.log(user_answers)
+    count++;
+    status_no[0] = count;
 }
 
 document.getElementById("previous-btn").onclick = function() {
-    questionAction(questions, status_no[0] - 1);
-    status_no[0] = status_no[0] - 1;
-    count = status_no[0] + 1;
-    console.log(status_no[0]);
-    user_answers.pop();
+    if (status_no[0] > 1) {
+        questionAction(questions, status_no[0] - 2);
+        status_no[0] = status_no[0] - 1;
+        count = status_no[0] + 1;
+        console.log(status_no[0]);
+        user_answers.pop();
+    }
 }
 
 
@@ -117,5 +122,5 @@ setTimeout(function(){
 }, 2400000)
 
 
-questionAction(questions, 0);
+nextButton();
 timeManager();
