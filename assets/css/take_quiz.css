@@ -78,10 +78,15 @@ main {
     font-weight: bold;
 }
 
-/* .image img {
-    height: 100px;
-    width: 100px;
-} */
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 300px;
+}
 
 .section {
     margin-left: 10%;
