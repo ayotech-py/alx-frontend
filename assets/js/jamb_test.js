@@ -14,7 +14,7 @@ function questionAction(question, index) {
     document.getElementById("question-no").innerHTML = `Question ${index + 1} of 40`;
     let edit_section = question[index].section;
     document.getElementById("question").innerHTML = question[index].question;
-    document.getElementById("section").innerHTML = edit_section.replaceAll(";", '<br>');
+    document.getElementById("section").innerHTML = edit_section.replaceAll(";", '<br>').replaceAll("].", "<br>");
     document.getElementsByTagName('img')[0].src = question[index].image;
     let answers = [question[index].option.a, question[index].option.b, question[index].option.c, question[index].option.d];
     let option = document.getElementById("answers")
