@@ -385,7 +385,7 @@ form h5 {
         flex-direction: column-reverse;
     }
 
-    .quiz-section .h1-text .about-text {
+    .quiz-section .h1-text .about-text, .organizeQuiz .h1-text .about-text {
         width: 80%;
         text-align: center;
         margin-top: 0;
