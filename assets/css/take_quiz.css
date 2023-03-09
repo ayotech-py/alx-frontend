@@ -83,6 +83,15 @@ main {
     width: 100px;
 } */
 
+.section {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.section p {
+    line-height: 1.5rem;
+}
+
 .answers {
     margin-left: 10%;
     margin-right: 10%;
