@@ -9,6 +9,8 @@ We'll know in schools, quizzes are mostly taken physically in the classroom but 
 LetsQuiz is a platform whereby a teacher can create a virtual classroom to organize a Quiz for her students. The Teacher/Organizer only needs to sign up and then create a classroom, each classroom will have a unique ID of 6 digits which will be generated automatically, the ID is used by the students to join the classroom.
 <br>
 The platform will consist of quizzes on various subjects. The teacher can choose a subject where he/she wants the quiz questions to come from.
+<br>
+Here is the link to view the Webapp live - quiz.ayotech-py.tech
 
 ## The Context
 
@@ -16,7 +18,7 @@ This project is my Portfolio Project, concluding my Foundations Year at ALX SE T
 
 ## The Team
 
-I happen the be the only one who would work on this project. I'm Ajao Malik by name, I'm a graphics designer, a teacher and an upcoming software engineer.
+I happen the be the only one who would work on this project. I'm Ajao Malik by name, I'm a software engineer, a graphics designer and a tutor.
 <br>
 I will be handling the fullstack role in this project.
 
