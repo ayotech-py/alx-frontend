@@ -8,8 +8,7 @@ async function getDataa() {
     document.getElementById("response").innerHTML = "please wait..."; 
     let year = document.getElementById("year").value;
     let subject = document.getElementById("subject").value;
-    let subject_title = document.getElementById("subject").innerHTML;
-    window.sessionStorage.setItem("subject", subject)
+    let subject_title = document.getElementById("subject").getElementsByTagName("option")[0].innerHTML;
     window.sessionStorage.setItem("subject", subject_title)
 
     let response = await fetch(`https://questions.aloc.com.ng/api/v2/q/40?subject=${subject}&year=${year}&type=utme`, {

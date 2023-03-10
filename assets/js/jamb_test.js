@@ -10,7 +10,7 @@ let user_answers = [];
 let correct_answers = [];
 
 function questionAction(question, index) {
-    document.getElementById("subject-title").innerHTML = window.sessionStorage.subject_title;
+    document.getElementById("subject-title").innerHTML = window.sessionStorage.subject;
     document.getElementById("question-no").innerHTML = `Question ${index + 1} of 40`;
     let edit_section = question[index].section.replaceAll(":", ":<br>");
     document.getElementById("question").innerHTML = question[index].question;
@@ -73,7 +73,7 @@ function nextButton() {
     }
     
     
-    if (count == 39) {
+    if (count == 40) {
         Result();
         document.getElementById("next-btn").innerHTML = `<a href="./end_quiz.html"><button class="btn-01" id="next-btn">Submit</button></a>`;
     } else if(count < 39) {
@@ -117,6 +117,7 @@ function Result(){
 
 document.getElementById("submit-btn").onclick = function() {
     Result();
+    window.location.replace("./end_quiz.html")
 }
 
 setTimeout(function(){
