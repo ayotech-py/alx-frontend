@@ -32,7 +32,7 @@ These are the technologies I'll be using to build my portfolio project
 - GeeksforGeeks
 - StackOverflow
 - Google
-If I'm to tradeoff Django Web Framework, it would be Flask, but still prefer using Django over flask because Django makes production faster and easier, very efficient, it security it top notch.
+  If I'm to tradeoff Django Web Framework, it would be Flask, but still prefer using Django over flask because Django makes production faster and easier, very efficient, it security it top notch.
   MySql can also be a tradeoff with prosgresql, but I much more prefer MySql, I've fallen in love with MySql.
 
 ## Challenge
@@ -49,6 +49,6 @@ The risk here is just Examination Malpractice by some of the students, since the
 There would be only one github repo where the codes will be pushed to which will be my github repo (ayotech-py). Since the Project will be done by me only. I'll have a branch for each milestone, after the milestone has passed the testing stage, I can then merge it with the master branch. I'll be testing with Postman, I'll be making use of APIs for fetching quiz questions. I'll also be populating a database for testing from FILmLDB.
 Existing Solutions
 
-- Kahoot(https://kahoot.it) - Kahoot! is a free game-based learning platform that makes it fun to learn – any subject, in any language, on any device.
-- WebTest(https://www.webtest.ng) - Computer Base Training Examination. We conduct CBT exams for Universities, Polytechnics and Corporate Organisations
+- Kahoot(https://kahoot.it)[https://kahoot.it] - Kahoot! is a free game-based learning platform that makes it fun to learn – any subject, in any language, on any device.
+- WebTest(https://www.webtest.ng)[https://www.webtest.ng] - Computer Base Training Examination. We conduct CBT exams for Universities, Polytechnics and Corporate Organisations
   The improvement I'll be making is that there will be a livestream section for the organizer/Teacher end, which will help in curbing malpractice since the students will be monitored. Any student caught in the act of Malpractice can be flagged by the teacher/Organizer
