@@ -12,9 +12,9 @@ The platform will consist of quizzes on various subjects. The teacher can choose
 
 This project is my Portfolio Project, concluding my Foundations Year at ALX SE Training. I was able to choose what we wanted to work on, as long as I presented a working program at the end of the three weeks of development.
 
-# The Team
+## The Team
 
-Unfortunately I happen the be the only one who would work on this project. I'm Ajao Malik by name, I'm a graphics designer, a teacher and an upcoming software engineer.
+I happen the be the only one who would work on this project. I'm Ajao Malik by name, I'm a graphics designer, a teacher and an upcoming software engineer.
 I will be handling the fullstack role in this project.
 
 ## Technologies
