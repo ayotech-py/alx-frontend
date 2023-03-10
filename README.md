@@ -15,13 +15,13 @@ This project is my Portfolio Project, concluding my Foundations Year at ALX SE T
 ## The Team
 
 I happen the be the only one who would work on this project. I'm Ajao Malik by name, I'm a graphics designer, a teacher and an upcoming software engineer.
-I will be handling the fullstack role in this project.
+<br>I will be handling the fullstack role in this project.
 
 ## Technologies
 
 These are the technologies I'll be using to build my portfolio project
 
-- Frontend
+Bold Frontend
 - HTML
 - CSS and
 - Javascript
