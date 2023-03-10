@@ -137,6 +137,7 @@ function Result(){
 
 document.getElementById("submit-btn").onclick = function() {
     Result();
+    window.location.replace("./end_quiz.html")
 }
 
 setTimeout(function(){
