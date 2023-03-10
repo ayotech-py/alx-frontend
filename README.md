@@ -10,6 +10,11 @@ LetsQuiz is a platform whereby a teacher can create a virtual classroom to organ
 <br>
 The platform will consist of quizzes on various subjects. The teacher can choose a subject where he/she wants the quiz questions to come from.
 <br>
+Here are few screenshots of the webapp
+![Alt image 1](./images/image_01.png)
+![Alt Image 02](./images/image_02.png)
+![Alt Image 03](./images/image_03.png)
+<br>
 Here is the link to view the Webapp live - https://quiz.ayotech-py.tech
 
 ## The Context
@@ -34,6 +39,7 @@ These are the technologies I'll be using to build my portfolio project
 
 **Backend**
 - Django (Python)
+- Django Restframework
 - MySql (database service)
 <br>
 
