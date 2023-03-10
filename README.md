@@ -10,7 +10,7 @@ LetsQuiz is a platform whereby a teacher can create a virtual classroom to organ
 <br>
 The platform will consist of quizzes on various subjects. The teacher can choose a subject where he/she wants the quiz questions to come from.
 <br>
-Here is the link to view the Webapp live - (quiz.ayotech-py.tech)
+Here is the link to view the Webapp live - https://quiz.ayotech-py.tech
 
 ## The Context
 
