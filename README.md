@@ -21,14 +21,14 @@ I happen the be the only one who would work on this project. I'm Ajao Malik by n
 
 These are the technologies I'll be using to build my portfolio project
 
-Bold Frontend
+**Frontend**
 - HTML
 - CSS and
 - Javascript
-- Backend
+**Backend**
 - Django (Python)
 - MySql (database service)
-- Platforms
+**Platforms**
 - GeeksforGeeks
 - StackOverflow
 - Google
