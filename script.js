@@ -29,6 +29,7 @@ test.then(data => {
 }) */
 
 document.getElementById('jamb_test').onclick = function() {
+    window.sessionStorage.setItem("quiz_type", "jamb")
     getDataa();
 }
 
