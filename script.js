@@ -8,7 +8,10 @@ async function getDataa() {
     document.getElementById("response").innerHTML = "please wait..."; 
     let year = document.getElementById("year").value;
     let subject = document.getElementById("subject").value;
+    let subject_title = document.getElementById("subject").innerHTML;
     window.sessionStorage.setItem("subject", subject)
+    window.sessionStorage.setItem("subject", subject_title)
+
     let response = await fetch(`https://questions.aloc.com.ng/api/v2/q/40?subject=${subject}&year=${year}&type=utme`, {
         headers: {
             'Accept': 'application/json',
@@ -22,11 +25,6 @@ async function getDataa() {
     console.log(questions)
     window.location.replace("./assets/html/jamb_test.html")
 }
-
-/* let test = getDataa();
-test.then(data => {
-    console.log("landed")
-}) */
 
 document.getElementById('jamb_test').onclick = function() {
     window.sessionStorage.setItem("quiz_type", "jamb")
