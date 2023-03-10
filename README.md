@@ -17,7 +17,8 @@ This project is my Portfolio Project, concluding my Foundations Year at ALX SE T
 ## The Team
 
 I happen the be the only one who would work on this project. I'm Ajao Malik by name, I'm a graphics designer, a teacher and an upcoming software engineer.
-<br>I will be handling the fullstack role in this project.
+<br>
+I will be handling the fullstack role in this project.
 
 ## Technologies
 
@@ -40,7 +41,8 @@ These are the technologies I'll be using to build my portfolio project
 - Google
 <br>
 If I'm to tradeoff Django Web Framework, it would be Flask, but still prefer using Django over flask because Django makes production faster and easier, very efficient, it security it top notch.
-<br>MySql can also be a tradeoff with prosgresql, but I much more prefer MySql, I've fallen in love with MySql.
+<br>
+MySql can also be a tradeoff with prosgresql, but I much more prefer MySql, I've fallen in love with MySql.
 
 ## Challenge
 
@@ -60,4 +62,5 @@ Existing Solutions
 
 - Kahoot(https://kahoot.it) - Kahoot! is a free game-based learning platform that makes it fun to learn – any subject, in any language, on any device.
 - WebTest(https://www.webtest.ng) - Computer Base Training Examination. We conduct CBT exams for Universities, Polytechnics and Corporate Organisations
-<br>The improvement I'll be making is that there will be a livestream section for the organizer/Teacher end, which will help in curbing malpractice since the students will be monitored. Any student caught in the act of Malpractice can be flagged by the teacher/Organizer
+<br>
+The improvement I'll be making is that there will be a livestream section for the organizer/Teacher end, which will help in curbing malpractice since the students will be monitored. Any student caught in the act of Malpractice can be flagged by the teacher/Organizer
