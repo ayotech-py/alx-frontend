@@ -32,8 +32,9 @@ These are the technologies I'll be using to build my portfolio project
 - GeeksforGeeks
 - StackOverflow
 - Google
-  <br>If I'm to tradeoff Django Web Framework, it would be Flask, but still prefer using Django over flask because Django makes production faster and easier, very efficient, it security it top notch.
-  MySql can also be a tradeoff with prosgresql, but I much more prefer MySql, I've fallen in love with MySql.
+<br>
+If I'm to tradeoff Django Web Framework, it would be Flask, but still prefer using Django over flask because Django makes production faster and easier, very efficient, it security it top notch.
+<br>MySql can also be a tradeoff with prosgresql, but I much more prefer MySql, I've fallen in love with MySql.
 
 ## Challenge
 
