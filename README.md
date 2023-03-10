@@ -60,5 +60,4 @@ Existing Solutions
 
 - Kahoot(https://kahoot.it) - Kahoot! is a free game-based learning platform that makes it fun to learn – any subject, in any language, on any device.
 - WebTest(https://www.webtest.ng) - Computer Base Training Examination. We conduct CBT exams for Universities, Polytechnics and Corporate Organisations
-<br>  
-The improvement I'll be making is that there will be a livestream section for the organizer/Teacher end, which will help in curbing malpractice since the students will be monitored. Any student caught in the act of Malpractice can be flagged by the teacher/Organizer
+<br>The improvement I'll be making is that there will be a livestream section for the organizer/Teacher end, which will help in curbing malpractice since the students will be monitored. Any student caught in the act of Malpractice can be flagged by the teacher/Organizer
