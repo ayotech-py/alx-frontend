@@ -25,9 +25,13 @@ These are the technologies I'll be using to build my portfolio project
 - HTML
 - CSS and
 - Javascript
+<br>
+
 **Backend**
 - Django (Python)
 - MySql (database service)
+<br>
+
 **Platforms**
 - GeeksforGeeks
 - StackOverflow
